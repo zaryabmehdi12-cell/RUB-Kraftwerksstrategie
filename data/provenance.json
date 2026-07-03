@@ -1,0 +1,84 @@
+{
+  "project": "RUB - Evaluating Germany's Kraftwerksstrategie (CRM)",
+  "retrieval_date_utc": "2026-06-13T17:50:52Z",
+  "reference_year_calibration": 2025,
+  "target_year": 2030,
+  "primary_source": {
+    "name": "Fraunhofer ISE Energy-Charts API",
+    "base_url": "https://api.energy-charts.info",
+    "license": "CC BY 4.0 (data: Bundesnetzagentur | SMARD.de, ENTSO-E)",
+    "token_required": false
+  },
+  "series": [
+    {
+      "series": "Actual total load (hourly)",
+      "endpoint": "/public_power field 'Load'",
+      "url": "https://api.energy-charts.info/public_power?country=de",
+      "year": 2025,
+      "units": "MW",
+      "file": "data/processed/demand_2025_hourly.csv",
+      "flag": null
+    },
+    {
+      "series": "Wind onshore / offshore / solar capacity factors (hourly)",
+      "endpoint": "/public_power generation / reference capacity",
+      "url": "https://api.energy-charts.info/public_power?country=de",
+      "year": 2025,
+      "units": "per-unit (0-1)",
+      "file": "data/processed/cf_2025_hourly.csv",
+      "flag": "CF = generation / annual-avg installed capacity (config); shapes re-scaled to 2030 fleet"
+    },
+    {
+      "series": "Run-of-river availability (hourly)",
+      "endpoint": "/public_power field 'Hydro Run-of-River'",
+      "url": "https://api.energy-charts.info/public_power?country=de",
+      "year": 2025,
+      "units": "per-unit (0-1)",
+      "file": "data/processed/cf_2025_hourly.csv",
+      "flag": null
+    },
+    {
+      "series": "Day-ahead price DE-LU (hourly, validation)",
+      "endpoint": "/price",
+      "url": "https://api.energy-charts.info/price?bzn=DE-LU",
+      "year": 2025,
+      "units": "EUR/MWh",
+      "file": "data/processed/price_2025_hourly.csv",
+      "flag": null
+    },
+    {
+      "series": "Generation per production type (hourly, calibration mix)",
+      "endpoint": "/public_power",
+      "url": "https://api.energy-charts.info/public_power?country=de",
+      "year": 2025,
+      "units": "MW",
+      "file": "data/processed/generation_2025_hourly.csv",
+      "flag": null
+    }
+  ],
+  "scenario_inputs_2030_documented_in": "config.py",
+  "scenario_input_sources": {
+    "renewable_targets_2030": "EEG 2023 / NEP Szenariorahmen 2025 (Scn B): PV 215, onshore 115, offshore 30 GW",
+    "coal_2030": "KVBG Anlage 2: 8 GW hard coal + 9 GW lignite",
+    "demand_2030": "680.0 TWh (NEP Szenariorahmen 2025, Scn B) [VERIFY]",
+    "fuel_co2_prices_2030": "NEP Szenariorahmen 2025 commodity annex / Langfristszenarien [VERIFY]",
+    "tech_costs": "Danish Energy Agency Technology Catalogue (PyPSA technology-data)",
+    "co2_intensities": "Umweltbundesamt CC 29/2022",
+    "policy": "BMWE 15 Jan 2026 (12 GW tendered, 10 GW long-run dispatchable)"
+  },
+  "data_summary_2025": {
+    "hours": 8760,
+    "annual_load_twh": 465.81605385,
+    "peak_load_gw": 75.635225,
+    "min_load_gw": 33.233275,
+    "cf_annual_mean": {
+      "wind_onshore": 0.19044170920308764,
+      "wind_offshore": 0.3234523572438952,
+      "solar": 0.08004964135273973,
+      "ror": 0.3522673978310502
+    },
+    "price_mean_eur_mwh": 89.32812871004566,
+    "price_min_eur_mwh": -250.32,
+    "price_max_eur_mwh": 583.4
+  }
+}

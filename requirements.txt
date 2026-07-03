@@ -1,0 +1,18 @@
+# Python dependencies for the Kraftwerksstrategie PyPSA dispatch model
+# Tested target: Python 3.11 (3.10-3.12 supported).
+#
+# If `pip install -r requirements.txt` hits a resolver conflict on your machine,
+# use the conda-forge route in README.md (section 4B) instead -- it is the most
+# reliable way to install PyPSA + HiGHS on Windows.
+#
+# numpy pinned < 2.0 for broad compatibility with linopy/xarray/scipy.
+
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+requests==2.32.3
+python-dotenv==1.0.1
+
+# Optimisation stack
+pypsa==0.29.0          # pulls in linopy, xarray, scipy, networkx automatically
+highspy==1.7.2         # HiGHS solver (open-source)

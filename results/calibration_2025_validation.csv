@@ -1,0 +1,11 @@
+metric,model_2025,actual_2025,error_pct
+mean_price_eur_mwh,90.3431041260986,89.33,1.1
+median_price_eur_mwh,93.77441860465117,92.43,1.5
+price_std_eur_mwh,23.744421386166515,52.09,-54.4
+p5_price_eur_mwh,63.83893784210526,-0.11,58135.4
+p95_price_eur_mwh,128.1875,162.35,-21.0
+min_price_eur_mwh,-1.0,-250.32,99.6
+max_price_eur_mwh,128.1875,583.4,-78.0
+hours_above_150,0.0,635.0,-100.0
+negative_price_hours,273.0,576.0,-52.6
+renewable_share_pct,54.57498001749853,58.8,-7.2

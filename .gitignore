@@ -1,0 +1,44 @@
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ─── Virtual environment (recreated with: pip install -r requirements.txt) ───
+venv/
+.venv/
+env/
+
+# ─── Secrets — never commit real tokens ───
+.env
+
+# ─── Data (Re-creatable via data_loader.py; do not commit large files) ───
+data/raw/
+data/processed/
+
+# ─── OS / editor junk ───
+.DS_Store
+Thumbs.db
+.vscode/
+
+# ─── Office temporary lock files ───
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# ─── Archives ───
+*.rar
+*.zip
+
+# ─── Specific project files you chose to exclude ───
+EVALUATION.md
+RUN_IN_VSCODE.md
+STEP0_PLAN.md
+STEP2_SANITY_CHECK.md
+build_report.py
+presentation.pptx
+report/report.docx
+report/report_RUB.docx
+DATA_VERIFICATION.md
+Model_Explanation_PlainEnglish.docx
+CLAUDE.md
