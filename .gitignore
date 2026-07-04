@@ -49,3 +49,7 @@ AGENTS.md
 
 # ─── Stray shell-paste artifact (accidental file) ───
 *ExecutionPolicy*
+
+# ─── Report template & annotated-code figures (kept locally, not versioned) ───
+report/*.docx
+figures/code*.png
