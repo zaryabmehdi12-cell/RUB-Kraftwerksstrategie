@@ -42,3 +42,10 @@ report/report_RUB.docx
 DATA_VERIFICATION.md
 Model_Explanation_PlainEnglish.docx
 CLAUDE.md
+AGENTS.md
+
+# ─── Presentations (kept locally, not versioned) ───
+*.pptx
+
+# ─── Stray shell-paste artifact (accidental file) ───
+*ExecutionPolicy*
