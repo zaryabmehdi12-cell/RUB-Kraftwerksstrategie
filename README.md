@@ -361,7 +361,7 @@ rough:
 
 ## 👤 Author & license
 
-**Author:** Muhammad Ahmad Khan, Demand and Supply in Energy Markets Project, Ruhr-Universität
+**Author:** Muhammad Zaryab Mehdi, Demand and Supply in Energy Markets Project, Ruhr-Universität
 Bochum, 2026.
 
 **Data:** © respective providers; Energy-Charts data under **CC BY 4.0**.
